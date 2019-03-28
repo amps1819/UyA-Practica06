@@ -1,2 +1,2 @@
 # UyA-Practica06
-Usabilidad y Accesibilidad - Práctica 05 - JQuery+AJAX
+Usabilidad y Accesibilidad - Práctica 06 - JQuery+AJAX
