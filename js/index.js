@@ -4,5 +4,5 @@ $("#boton").click(function(){
       $("#div1").html(result);
     }});
     */
-   $.get("https://jsonplaceholder.typicode.com/comments?postId=1", function(){ $('#div1').load() });
+   $.get("https://jsonplaceholder.typicode.com/comments?postId=1", function(result){ $('#div1').load(result) });
 });
