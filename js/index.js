@@ -7,9 +7,9 @@ function reset() {
 $('#formulario').submit(function(){
     $.ajax({url: "https://jsonplaceholder.typicode.com/comments?postId="+$('#texto').val(), type: "GET", success: function(respuesta){
         $("#parrafo")
-        .append("<table>")
-        .append("<thead><tr><th>PostID</th><th>ID</th><th>Name</th><th>Email</th><th>Body</th></tr></thead>")
-        .append("<tbody>");
+        .text("<table>")
+        .text("<thead><tr><th>PostID</th><th>ID</th><th>Name</th><th>Email</th><th>Body</th></tr></thead>")
+        .text("<tbody>");
         for (var i = 0; i < respuesta.length; i++) {
             $("#parrafo")
             .append("<tr>")
@@ -21,8 +21,8 @@ $('#formulario').submit(function(){
             .append("</tr>");
         }
         $("#parrafo")
-        .append("</tbody>")
-        .append("</table>");
+        .text("</tbody>")
+        .text("</table>");
         /*
         $("#parrafo").append("<table>");
         $("#parrafo").append("<thead><tr><th>PostID</th><th>ID</th><th>Name</th><th>Email</th><th>Body</th></tr></thead>");
