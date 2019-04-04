@@ -8,11 +8,11 @@ $('#formulario').submit(function(){
     $.ajax({url: "https://jsonplaceholder.typicode.com/comments?postId="+$('#texto').val(), type: "GET", success: function(respuesta){
         $("#parrafo").append("<table>")
         .append("<thead><tr><th>PostID</th><th>ID</th><th>Name</th><th>Email</th><th>Body</th></tr></thead>")
-        .append("<tbody>")
+        .append("<tbody>");
         for (var i = 0; i < respuesta.length; i++) {
-            .append("<tr><td>"+respuesta[i]["postId"]+"</td><td>"+respuesta[i]["id"]+"</td><td>"+respuesta[i]["name"]+"</td><td>"+respuesta[i]["email"]+"</td><td>"+respuesta[i]["body"]+"</td></tr>")
+            $("#parrafo").append("<tr><td>"+respuesta[i]["postId"]+"</td><td>"+respuesta[i]["id"]+"</td><td>"+respuesta[i]["name"]+"</td><td>"+respuesta[i]["email"]+"</td><td>"+respuesta[i]["body"]+"</td></tr>");
         }
-        .append("</tbody>")
+        $("#parrafo").append("</tbody>")
         .append("</table>");
         /*
         $("#parrafo").append("<table>");
